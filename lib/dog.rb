@@ -7,7 +7,7 @@ class Dog
     @breed = breed
   end
 
-  def ::create_table 
+  def ::create_table
     sql = <<-SQL
       CREATE TABLE dogs (
         id INTEGER PRIMARY KEY,
@@ -15,5 +15,6 @@ class Dog
         breed TEXT
       );
     SQL
+    DB[:conn].execute(sql)
   end
 end
