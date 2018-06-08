@@ -1,7 +1,7 @@
 class Dog
   attr_accessor :name, :breed
   attr_reader :id
-  
+
   def initialize(id: nil, name:, breed:)
     @id = id
     @name = name
@@ -57,7 +57,7 @@ class Dog
       dog_data = dog[0]
       dog = Dog.new(id: dog_data[0], name: dog_data[1], breed: dog_data[2])
     else
-      song = self.create(name: name, breed: breed)
+      dog = self.create(name: name, breed: breed)
     end
     dog
   end
