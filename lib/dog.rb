@@ -39,7 +39,7 @@ class Dog
   end
 
   def self::create(row)
-    dog = self.new(row[0], row[1], row[2])
+    dog = self.new(row)
     dog.save
     dog
   end
