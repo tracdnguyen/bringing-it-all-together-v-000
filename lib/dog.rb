@@ -70,7 +70,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ?"
 
     result = DB[:conn].execute(sql, name)[0][0]
-    
+
     self.find_by_id(result)
   end
 end
