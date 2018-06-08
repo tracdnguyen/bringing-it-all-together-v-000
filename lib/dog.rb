@@ -48,6 +48,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE id = ?"
     result = DB[:conn].execute(sql, id)[0]
     self.new(result[0], result[1], result[2])
+    self
   end
 
   def self::new_from_db
