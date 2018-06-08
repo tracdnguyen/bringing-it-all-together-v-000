@@ -60,4 +60,8 @@ class Dog
     end
     dog
   end
+
+  def self::new_from_db(row)
+    self.find_or_create_by(name: row[1], breed: row[2])
+  end
 end
